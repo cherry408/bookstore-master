@@ -1,0 +1,6 @@
+edu\hut\bookshop\service\LoginRegisterServiceTest.class
+edu\hut\bookshop\service\OrderHandleServiceTest.class
+edu\hut\bookshop\BookshopApplicationTests.class
+edu\hut\bookshop\service\ShoppingCartServiceTest.class
+edu\hut\bookshop\dao\UserMapperTest.class
+edu\hut\bookshop\service\BookDisplayServiceTest.class

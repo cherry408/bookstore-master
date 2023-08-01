@@ -1,0 +1,48 @@
+server:
+  port: 8080
+
+#配置数据库和数据源
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/graduation_bookshop?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+  #json日期格式
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+#指定mapper文件的位置
+mybatis:
+  mapper-locations: classpath:mappers/*.xml,classpath:mappers/customize/*.xml
+
+#mybatis-pageHelper分页工具
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+  #关闭thymeleaf的缓存
+  thymeleaf:
+    cache: false
+    mode: HTML
+  #热部署
+  devtools:
+    restart:
+      enabled: true
+
+#sql日志打印配置
+logging:
+  level:
+    edu:
+      hut:
+        bookshop:
+          dao: debug
