@@ -1,2 +1,2 @@
 # bookstore-master
-图书管理系统（Springboot+Mybatis）
+网上书城平台（Springboot+Mybatis）
